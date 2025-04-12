@@ -5,12 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Francis van Uyten - Resume</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       background: #f4f4f4;
       color: #333;
+    }
+    header {
+      background: #222;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: auto;
+      color: #fff;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.2rem;
     }
     .container {
       max-width: 900px;
@@ -53,24 +76,34 @@
 </head>
 <body>
 
-  <div class="container">
-      <nav>
-  <!-- other links -->
+  <header>
+    <nav>
+      <div style="font-size: 1.3rem; font-weight: bold;">
+        Francis van Uyten
+      </div>
+      <div style="display: flex;">
+        <a href="#personal-profile">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#my-approach">Approach</a>
-      </nav>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
     <div class="header">
       <h1>Francis van Uyten</h1>
       <p><strong>Automation Software Engineer</strong></p>
       <p class="contact">
-      Netherlands • <a href="mailto:vanuytenf@gmail.com">vanuytenf@gmail.com</a> 
+        <span id="contact">Netherlands</span> • <a href="mailto:vanuytenf@gmail.com">vanuytenf@gmail.com</a>
       </p>
-      <p> </p>
     </div>
 
-    <h2>Personal Profile</h2>
+    <h2 id="personal-profile">Personal Profile</h2>
     <p>I thrive on challenges that engage my focus, much like solving a puzzle. My programming approach is both creative and structured—I begin by defining a clear architecture before diving into development. I remain calm under pressure and value freedom in my work. The tougher the challenge, the sweeter the victory. I am always eager to help where needed, maintaining a positive outlook and striving for the best results. Passionate about continuous learning, I enjoy exploring new programming languages like MicroPython.</p>
 
-    <h2>Work Experience</h2>
+    <h2 id="experience">Work Experience</h2>
     <p><strong>Software Engineer – Elestor</strong> (2023 – Present)</p>
     <ul>
       <li>Established and optimized software development processes</li>
@@ -90,7 +123,7 @@
       <li>Built testing tools in Python and C# for Debian-based HMI systems</li>
       <li>Reviewed P&IDs, schematics, and performed QA/QC and commissioning</li>
       <li>Developed firmware for Barth STG-800 (STM32)</li>
-      <li>Develop pump skid with Bosch Denoxtronic pump/injector using CANBUS-J1939 Controller with STG-800</li>
+      <li>Developed pump skid with Bosch Denoxtronic pump/injector using CANBUS-J1939 Controller with STG-800</li>
     </ul>
 
     <p><strong>Embedded Software Engineer – Datapros</strong> (2016)</p>
@@ -103,7 +136,7 @@
       <li>Installed electrical systems for robotics and industrial machines</li>
     </ul>
 
-    <h2>Technical Skills</h2>
+    <h2 id="skills">Technical Skills</h2>
     <ul>
       <li><strong>Programming:</strong> C, Python, ST ★★★★★ | C#, JavaScript ★★★★☆ | Web/HMI ★★★☆☆</li>
       <li><strong>PLCs & HMIs:</strong> Siemens, Codesys, PLCnext, LOGO!, OMRON, PILZ, Bachmann, Horner</li>
@@ -133,20 +166,15 @@
     </ul>
 
     <section id="my-approach" style="padding: 3rem 1rem; text-align: center; background-color: #f8f9fa;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem;">My Approach</h2>
-  <p style="max-width: 600px; margin: 0 auto 2rem; color: #555;">
-    A high-level view of how I approach client projects — visualized using a simplified C4-style model.
-  </p>
-  <div style="max-width: 1000px; margin: 0 auto;">
-    <img src="ClientNEngineer.svg" alt="Client-Engineer Diagram" style="width: 100%; max-width: 1000px; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <h2 style="font-size: 2rem; margin-bottom: 1rem;">My Approach</h2>
+      <p style="max-width: 600px; margin: 0 auto 2rem; color: #555;">
+        A high-level view of how I approach client projects — visualized using a simplified C4-style model.
+      </p>
+      <div style="max-width: 1000px; margin: 0 auto;">
+        <img src="ClientNEngineer.svg" alt="Client-Engineer Diagram" style="width: 100%; max-width: 1000px; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      </div>
+    </section>
   </div>
-</section>
-    
-  </div>
 
-
-
-  
 </body>
 </html>
-
