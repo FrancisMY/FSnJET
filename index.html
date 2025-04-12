@@ -9,45 +9,49 @@
       scroll-behavior: smooth;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f4f4;
       color: #333;
     }
     header {
-      background: #222;
-      padding: 1rem 2rem;
+      background: #1f1f1f;
+      padding: 1rem 0;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
     }
     nav {
+      max-width: 900px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 900px;
-      margin: auto;
-      color: #fff;
+      padding: 0 1rem;
+      color: white;
     }
-    nav a {
-      color: #fff;
+    .nav-links a {
+      color: white;
       text-decoration: none;
-      margin-left: 1.2rem;
+      margin-left: 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #00bcd4;
     }
     .container {
       max-width: 900px;
-      margin: auto;
+      margin: 2rem auto;
       padding: 2rem;
-      background: #fff;
+      background: white;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      margin-top: 2rem;
+      border-radius: 10px;
     }
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
       color: #2c3e50;
+      margin-bottom: 0.2rem;
     }
     h2 {
       border-bottom: 2px solid #ddd;
@@ -59,18 +63,12 @@
       font-size: 1rem;
       line-height: 1.6;
     }
-    .header p {
-      margin: 0.2rem 0;
+    ul {
+      padding-left: 1.2rem;
     }
     .contact a {
       color: #3498db;
       text-decoration: none;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .project-title {
-      font-weight: bold;
     }
   </style>
 </head>
@@ -78,10 +76,8 @@
 
   <header>
     <nav>
-      <div style="font-size: 1.3rem; font-weight: bold;">
-        Francis van Uyten
-      </div>
-      <div style="display: flex;">
+      <div style="font-size: 1.2rem; font-weight: bold;">Francis van Uyten</div>
+      <div class="nav-links">
         <a href="#personal-profile">Profile</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -92,13 +88,9 @@
   </header>
 
   <div class="container">
-    <div class="header">
-      <h1>Francis van Uyten</h1>
-      <p><strong>Automation Software Engineer</strong></p>
-      <p class="contact">
-        <span id="contact">Netherlands</span> • <a href="mailto:vanuytenf@gmail.com">vanuytenf@gmail.com</a>
-      </p>
-    </div>
+    <h1>Francis van Uyten</h1>
+    <p><strong>Automation Software Engineer</strong></p>
+    <p class="contact" id="contact">Netherlands • <a href="mailto:vanuytenf@gmail.com">vanuytenf@gmail.com</a></p>
 
     <h2 id="personal-profile">Personal Profile</h2>
     <p>I thrive on challenges that engage my focus, much like solving a puzzle. My programming approach is both creative and structured—I begin by defining a clear architecture before diving into development. I remain calm under pressure and value freedom in my work. The tougher the challenge, the sweeter the victory. I am always eager to help where needed, maintaining a positive outlook and striving for the best results. Passionate about continuous learning, I enjoy exploring new programming languages like MicroPython.</p>
@@ -174,6 +166,7 @@
         <img src="ClientNEngineer.svg" alt="Client-Engineer Diagram" style="width: 100%; max-width: 1000px; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
       </div>
     </section>
+
   </div>
 
 </body>
