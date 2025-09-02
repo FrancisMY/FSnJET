@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dygenix – Slimme Automatisering</title>
+  <style>
+    /* Algemene stijlen */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      color: #333;
+    }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { margin: 0; }
+    section { padding: 80px 20px; }
+    /* Header / Hero */
+    header {
+      background: #0d47a1;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; margin-bottom: 20px; }
+    header a.button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #ff9800;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    /* Navigatie */
+    nav {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: rgba(13,71,161,0.9);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      font-weight: bold;
+    }
+    /* Secties */
+    #about { background: #f4f4f4; }
+    #services { background: #e3f2fd; }
+    #portfolio { background: #f4f4f4; }
+    #contact { background: #e3f2fd; }
+    section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #0d47a1; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    .services, .portfolio { display: flex; flex-wrap: wrap; justify-content: space-around; }
+    .service, .project {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .service h3, .project h3 { margin-bottom: 15px; color: #0d47a1; }
+    /* Contact formulier */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    form input, form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 12px;
+      background: #0d47a1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    /* Footer */
+    footer {
+      background: #0d47a1;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .services, .portfolio { flex-direction: column; align-items: center; }
+      nav { flex-direction: column; }
+      nav a { margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigatie -->
+  <nav>
+    <a href="#about">Over</a>
+    <a href="#services">Diensten</a>
+    <a href="#portfolio">Projecten</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header / Hero -->
+  <header>
+    <h1>Dygenix</h1>
+    <p>Slimme automatiseringsoplossingen voor bedrijven</p>
+    <a href="#contact" class="button">Neem contact op</a>
+  </header>
+
+  <!-- Over Dygenix -->
+  <section id="about">
+    <div class="container">
+      <h2>Over Dygenix</h2>
+      <p>Dygenix ondersteunt bedrijven bij industriële automatisering, PLC-programmering en embedded software-oplossingen. Met praktische en betrouwbare oplossingen optimaliseren we processen en besparen we tijd en kosten.</p>
+    </div>
+  </section>
+
+  <!-- Diensten -->
+  <section id="services">
+    <div class="container">
+      <h2>Diensten</h2>
+      <div class="services">
+        <div class="service">
+          <h3>PLC & Automatisering</h3>
+          <p>Optimalisatie en programmering van industriële systemen voor maximale efficiëntie.</p>
+        </div>
+        <div class="service">
+          <h3>Remote Control & Monitoring</h3>
+          <p>Webpanelen en TCP-communicatie voor eenvoudig beheer en monitoring van machines.</p>
+        </div>
+        <div class="service">
+          <h3>Integratie & Advies</h3>
+          <p>Koppelingen tussen PLC’s en software zoals Python, Node.js of Node-RED, plus advies op maat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>Projecten</h2>
+      <div class="portfolio">
+        <div class="project">
+          <h3>Productielijn Optimalisatie</h3>
+          <p>Optimalisatie van een productielijn met CODESYS en eigen TCP-protocol.</p>
+        </div>
+        <div class="project">
+          <h3>Remote Reset Panel</h3>
+          <p>Webinterface ontwikkeld om machines op afstand te resetten en beheren.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Naam" required>
+        <input type="email" placeholder="E-mail" required>
+        <textarea placeholder="Bericht" rows="5" required></textarea>
+        <button type="submit">Verstuur</button>
+      </form>
+      <p style="text-align:center; margin-top:20px;">Of mail naar <a href="mailto:info@dygenix.nl">info@dygenix.nl</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Dygenix – Alle rechten voorbehouden
+  </footer>
+
+</body>
+</html>
